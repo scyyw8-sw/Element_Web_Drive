@@ -13,11 +13,11 @@ import java.util.List;
 /**
  * @Description: Controller
  * @Author: element_web_drive
- * @Date: 2024/10/18
+ * @Date: 2024/10/16
 */
 @RestController("userInfoController")
 @RequestMapping("userInfo")
-public class UserInfoController extends ABaseController {
+public class AccountController extends ABaseController {
 
 	@Resource
 	private UserInfoService userInfoService;
