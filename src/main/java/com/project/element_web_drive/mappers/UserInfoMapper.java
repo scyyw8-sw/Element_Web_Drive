@@ -5,7 +5,7 @@ public interface UserInfoMapper<T,P> extends BaseMapper {
 /**
  * @Description: 
  * @Author: element_web_drive
- * @Date: 2024/10/16
+ * @Date: 2024/10/18
 */
 
 /**
