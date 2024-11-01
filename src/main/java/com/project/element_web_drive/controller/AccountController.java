@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @RestController()
-public class AccountController {
+public class AccountController extends ABaseController{
 
     @Resource
     private UserInfoService userInfoService;
@@ -58,9 +58,7 @@ public class AccountController {
                 throw new BusinessException("图片验证码不正确");
             }
             emailCodeService.sendEmailCode(email,type);
-            //this line
-            // return getSuccessResponseVO(null);
-            return null;
+            return getSuccessResponseVO(null);
         }finally {
             session.removeAttribute(Constants.CHECK_CODE_KEY_EMAIL);
         }
