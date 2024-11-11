@@ -1,6 +1,7 @@
 package com.project.element_web_drive.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.management.relation.RelationNotFoundException;
 
@@ -20,4 +21,22 @@ public class  StringTools {
         }
         return false;
     }
+
+    public static String encodeByMD5(String originString) {
+        return StringTools.isEmpty(originString) ? null : DigestUtils.md5Hex(originString);
+    }
+
+
+
+    public static Boolean pathIsOk(String filePath){
+        if (StringTools.isEmpty(filePath)){
+            return true;
+        }
+        if(filePath.contains("../")||filePath.contains("..\\")){
+            return false;
+        }
+        return true;
+    }
+
+
 }

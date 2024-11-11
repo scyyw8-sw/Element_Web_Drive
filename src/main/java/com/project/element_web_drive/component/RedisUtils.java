@@ -45,7 +45,7 @@ public class RedisUtils<V>{
     }
 
     //普通缓存并设置时间
-    public boolean setex(String key, V value, Long time){
+    public boolean setex(String key, V value, Integer time){
         try {
             if(time>0){
                 redisTemplate.opsForValue().set(key,value,time, TimeUnit.SECONDS);

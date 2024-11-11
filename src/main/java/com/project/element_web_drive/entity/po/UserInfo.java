@@ -70,7 +70,8 @@ public class UserInfo implements Serializable {
 /**
  *总空间
 */
-	private String totalSpace;
+// change String to Long
+	private Long totalSpace;
 
 	 public void setUserId(String userId){
 		this.userId=userId;
@@ -132,10 +133,10 @@ public class UserInfo implements Serializable {
 	 public Long getUseSpace(){
 		return this.useSpace;
 	 }
-	 public void setTotalSpace(String totalSpace){
+	 public void setTotalSpace(Long totalSpace){
 		this.totalSpace=totalSpace;
 	 }
-	 public String getTotalSpace(){
+	 public Long getTotalSpace(){
 		return this.totalSpace;
 	 }
 	@Override

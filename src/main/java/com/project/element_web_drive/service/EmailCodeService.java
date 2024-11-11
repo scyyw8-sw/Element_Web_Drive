@@ -3,11 +3,11 @@ package com.project.element_web_drive.service;
 import com.project.element_web_drive.entity.po.EmailCode;
 import com.project.element_web_drive.entity.query.EmailCodeQuery;
 import com.project.element_web_drive.entity.vo.PaginationResultVO;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Service
+
 public interface EmailCodeService {
 
 	/**
@@ -59,6 +59,6 @@ public interface EmailCodeService {
 
 	void sendEmailCode(String email,Integer type);
 
-//	void checkCode(String email,String code);
+	void checkCode(String email,String code);
 
 }

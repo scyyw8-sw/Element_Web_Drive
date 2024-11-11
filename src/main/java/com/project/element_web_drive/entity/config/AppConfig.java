@@ -11,6 +11,7 @@ public class AppConfig {
     @Value("${admin.emails}")
     private String adminEmails;
 
+
     @Value("${project.folder:}")
     private String projectFolder;
 
@@ -74,4 +75,5 @@ public class AppConfig {
     public String getQqUrlRedirect() {
         return qqUrlRedirect;
     }
+
 }

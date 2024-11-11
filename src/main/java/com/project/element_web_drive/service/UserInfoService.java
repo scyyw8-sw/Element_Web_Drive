@@ -1,6 +1,7 @@
 package com.project.element_web_drive.service;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.project.element_web_drive.entity.dto.SessionWebUserDto;
 import org.springframework.format.annotation.DateTimeFormat;
 import com.project.element_web_drive.enums.DateTimePatternEnum;
 import com.project.element_web_drive.utils.DateUtils;
@@ -107,4 +108,14 @@ public interface UserInfoService{
  *根据NickName删除
 */
 	Integer deleteUserInfoByNickName(String nickName);
+
+	void register(String email, String nickName, String password, String emailCode);
+
+
+	SessionWebUserDto login(String email, String password);
+
+	void resetPassword(String email, String password, String emailCode);
+
+	SessionWebUserDto qqLogin(String code);
+
 }
